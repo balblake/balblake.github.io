@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- EDIT: page title -->
   <title>Blake Linders — Electrical Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,16 +11,9 @@
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════
-     NAV
-     EDIT: Update nav-name text.
-     The buttons auto-highlight as you scroll (handled by script.js).
-══════════════════════════════════════════ -->
 <nav id="nav">
-  <!-- EDIT: Your name on the left -->
   <a href="#hero" class="nav-name">Blake Linders</a>
 
-  <!-- Hamburger — visible only on mobile -->
   <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
     <span></span>
     <span></span>
@@ -38,398 +30,274 @@
   </ul>
 </nav>
 
-<!-- ══════════════════════════════════════════
-     HERO — photo + name
-     EDIT: Add src="yourphoto.jpg" to the <img>.
-           Update name, title, and location text.
-══════════════════════════════════════════ -->
 <div id="hero" class="hero-large">
   <div class="hero-inner">
-
     <div class="hero-photo">
-      <!-- EDIT: add src="yourphoto.jpg" here. The emoji disappears automatically when a real photo loads. -->
       <img src="" alt="Your Name" onerror="this.style.display='none'" />
       <div class="ph">👤</div>
     </div>
-
     <div class="hero-text">
-      <!-- EDIT: Your full name -->
       <h1 class="hero-name">Blake Linders</h1>
-      <!-- EDIT: Your role -->
       <p class="hero-title">Electrical Engineering Student</p>
-      <!-- EDIT: City · School -->
       <p class="hero-location">College Station, TX · Texas A&amp;M University</p>
     </div>
-
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     LINKS BAR
-     EDIT: Update every href below.
-           Resume button points to "resume.pdf" — put that file
-           in the same folder as index.html.
-══════════════════════════════════════════ -->
-<div id="links" class="links-large">
-  <div class="links-bar">
+<div id="main-content">
 
-    <!-- EDIT: Your GitHub URL -->
-    <a class="link-btn" href="https://github.com/balblake" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
-      </svg>
-      GitHub
-    </a>
-
-    <!-- EDIT: Your LinkedIn URL -->
-    <a class="link-btn" href="https://linkedin.com/in/blakelinders" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-        <circle cx="4" cy="4" r="2"/>
-      </svg>
-      LinkedIn
-    </a>
-
-    <!-- EDIT: Make sure resume.pdf is in the same folder -->
-    <a class="link-btn primary" href="resume.pdf" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-      </svg>
-      Resume
-    </a>
-
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════
-     ABOUT
-     EDIT: Replace the paragraph text with your bio.
-══════════════════════════════════════════ -->
-<section id="about">
-  <div class="section">
-    <p class="section-title">About</p>
-    <div class="about-text">
-      <p>
-        I'm an electrical engineering student at Texas A&amp;M University with a focus on
-        power electronics, PCB design, circuit simulation, and machine learning.
-        I enjoy working at the intersection of hardware and software — from designing
-        converter topologies in LTSpice to training models on embedded signal data.
-      </p>
-      <p>
-        <!-- EDIT: Add a second sentence or personal detail here -->
-        Currently seeking internship and research opportunities where I can contribute
-        to real engineering challenges.
-      </p>
-    </div>
-  </div>
-</section>
-
-<hr class="divider" />
-
-<!-- ══════════════════════════════════════════
-     EDUCATION
-     EDIT: Same pattern as Experience above.
-══════════════════════════════════════════ -->
-<section id="education" class="reveal">
-  <div class="section">
-    <p class="section-title">Education</p>
-    <div class="entries">
-
-      <div class="entry">
-        <div class="entry-date">2022 – Present</div>
-        <div class="entry-body">
-          <!-- EDIT: Degree, school, GPA, relevant coursework -->
-          <div class="entry-role">B.S. Electrical Engineering</div>
-          <div class="entry-org">Texas A&amp;M University</div>
-          <div class="entry-desc">
-            GPA: X.XX / 4.0 — Coursework in power electronics, analog and digital circuits,
-            signal processing, embedded systems, and machine learning.
-          </div>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-date">2018 – 2022</div>
-        <div class="entry-body">
-          <div class="entry-role">High School Diploma</div>
-          <div class="entry-org">Your High School</div>
-          <div class="entry-desc">
-            Add any relevant achievements, AP courses, or honors here.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<hr class="divider" />
-
-<!-- ══════════════════════════════════════════
-     SKILLS
-     EDIT: Add/remove <span class="skill"> items freely.
-           Add/remove .skill-group blocks for new categories.
-══════════════════════════════════════════ -->
-<section id="skills" class="reveal">
-  <div class="section">
-    <p class="section-title">Skills &amp; Tools</p>
-    <div class="skill-groups">
-
-      <div class="skill-group">
-        <div class="skill-group-name">Power Electronics</div>
-        <div class="skill-pills">
-          <span class="skill">DC-DC Converters</span>
-          <span class="skill">Motor Drives</span>
-          <span class="skill">Control Systems</span>
-          <span class="skill">Thermal Design</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-name">Circuit Simulation</div>
-        <div class="skill-pills">
-          <span class="skill">LTSpice</span>
-          <span class="skill">Multisim</span>
-          <span class="skill">MATLAB / Simulink</span>
-          <span class="skill">SPICE Analysis</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-name">PCB Design</div>
-        <div class="skill-pills">
-          <span class="skill">KiCad</span>
-          <span class="skill">Altium Designer</span>
-          <span class="skill">Schematic Capture</span>
-          <span class="skill">Layout &amp; Routing</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-name">Python &amp; ML</div>
-        <div class="skill-pills">
-          <span class="skill">NumPy / SciPy</span>
-          <span class="skill">PyTorch</span>
-          <span class="skill">Scikit-learn</span>
-          <span class="skill">Matplotlib</span>
-          <span class="skill">SymPy</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<hr class="divider" />
-
-<!-- ══════════════════════════════════════════
-     PROJECTS
-     EDIT: Update each .project block.
-           Copy the commented block at the bottom to add a new project.
-══════════════════════════════════════════ -->
-<section id="projects" class="reveal">
-  <div class="section">
-    <p class="section-title">Projects</p>
-    <div class="projects">
-
-      <div class="project">
-        <div class="project-header">
-          <!-- EDIT: Project title -->
-          <div class="project-title">Buck-Boost Converter Design</div>
-          <div class="project-links">
-            <!-- EDIT: Your GitHub repo link. Remove this <a> if there's no link. -->
-            <a class="project-link" href="#" target="_blank">GitHub ↗</a>
-          </div>
-        </div>
-        <!-- EDIT: Project description -->
-        <p class="project-desc">
-          Designed and simulated a synchronous buck-boost converter with closed-loop PID control.
-          Validated in LTSpice and built a hardware prototype achieving 94% efficiency.
-        </p>
-        <!-- EDIT: Tags — add/remove as needed -->
-        <div class="project-tags">
-          <span class="project-tag">LTSpice</span>
-          <span class="project-tag">Power Electronics</span>
-          <span class="project-tag">PCB Design</span>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-header">
-          <div class="project-title">PCB Sensor Array</div>
-          <div class="project-links">
-            <a class="project-link" href="#" target="_blank">GitHub ↗</a>
-          </div>
-        </div>
-        <p class="project-desc">
-          4-layer PCB for a multi-sensor data acquisition system with onboard signal conditioning,
-          16-bit ADC, and STM32 microcontroller for industrial monitoring.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">KiCad</span>
-          <span class="project-tag">Altium</span>
-          <span class="project-tag">STM32</span>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-header">
-          <div class="project-title">ML Fault Detection System</div>
-          <div class="project-links">
-            <a class="project-link" href="#" target="_blank">GitHub ↗</a>
-          </div>
-        </div>
-        <p class="project-desc">
-          CNN classifier in PyTorch trained to identify electrical fault signatures from
-          time-series current waveforms — 97.3% accuracy across 12 fault classes.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">PyTorch</span>
-          <span class="project-tag">Signal Analysis</span>
-        </div>
-      </div>
-
-      <!-- ADD A PROJECT: copy this block, uncomment, and fill in
-      <div class="project">
-        <div class="project-header">
-          <div class="project-title">Project Title</div>
-          <div class="project-links">
-            <a class="project-link" href="#" target="_blank">GitHub ↗</a>
-          </div>
-        </div>
-        <p class="project-desc">Project description.</p>
-        <div class="project-tags">
-          <span class="project-tag">Tag</span>
-        </div>
-      </div>
-      -->
-
-    </div>
-  </div>
-</section>
-
-<hr class="divider" />
-
-<!-- ══════════════════════════════════════════
-     EXPERIENCE
-     EDIT: Update each .entry block.
-           Copy the commented block at the bottom to add a new entry.
-══════════════════════════════════════════ -->
-<section id="experience" class="reveal">
-  <div class="section">
-    <p class="section-title">Experience</p>
-    <div class="entries">
-
-      <div class="entry">
-        <!-- EDIT: Date range -->
-        <div class="entry-date">Summer 2024</div>
-        <div class="entry-body">
-          <!-- EDIT: Title, company, description -->
-          <div class="entry-role">Engineering Intern</div>
-          <div class="entry-org">Company Name</div>
-          <div class="entry-desc">
-            Describe what you worked on, what you built, and the impact you had.
-            Include tools and technologies used.
-          </div>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-date">2023 – Present</div>
-        <div class="entry-body">
-          <div class="entry-role">Research Assistant</div>
-          <div class="entry-org">Research Lab / Group Name</div>
-          <div class="entry-desc">
-            Describe any on-campus research, lab projects, or faculty collaboration.
-          </div>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-date">2022 – Present</div>
-        <div class="entry-body">
-          <div class="entry-role">Project Lead</div>
-          <div class="entry-org">Student Organization / IEEE Chapter</div>
-          <div class="entry-desc">
-            Clubs, design teams, hackathons, or other leadership roles.
-          </div>
-        </div>
-      </div>
-
-      <!-- ADD AN ENTRY: copy this block, uncomment, and fill in
-      <div class="entry">
-        <div class="entry-date">Date</div>
-        <div class="entry-body">
-          <div class="entry-role">Title</div>
-          <div class="entry-org">Organization</div>
-          <div class="entry-desc">Description.</div>
-        </div>
-      </div>
-      -->
-
-    </div>
-  </div>
-</section>
-
-<hr class="divider" />
-
-<!-- ══════════════════════════════════════════
-     CONTACT
-     Just email + social links — no form.
-     EDIT: Replace every href and visible text below.
-══════════════════════════════════════════ -->
-<section id="contact" class="reveal">
-  <div class="section">
-    <p class="section-title">Contact</p>
-    <!-- EDIT: Update blurb if you want -->
-    <p class="contact-note">
-      Open to internships, research collaborations, and interesting projects.
-      Best way to reach me is by email.
-    </p>
-    <div class="contact-items">
-
-      <!-- EDIT: Your email address (both in href and as visible text) -->
-      <a class="contact-item" href="mailto:you@email.com">
+  <div id="links" class="links-large">
+    <div class="links-bar">
+      <a class="link-btn primary" href="resume.pdf" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-          <polyline points="22,6 12,13 2,6"/>
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
         </svg>
-        you@email.com
+        Resume
       </a>
-
-      <!-- EDIT: Your GitHub URL and username -->
-      <a class="contact-item" href="https://github.com/yourusername" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://github.com/balblake" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
         </svg>
-        github.com/yourusername
+        GitHub
       </a>
-
-      <!-- EDIT: Your LinkedIn URL and profile slug -->
-      <a class="contact-item" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://linkedin.com/in/blakelinders" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
           <circle cx="4" cy="4" r="2"/>
         </svg>
-        linkedin.com/in/yourprofile
+        LinkedIn
       </a>
-
     </div>
   </div>
-</section>
 
-<!-- ══════════════════════════════════════════
-     FOOTER
-     EDIT: Name and year
-══════════════════════════════════════════ -->
-<footer>
-  <span>© 2026 Blake Linders</span>
-  <span>Electrical Engineer</span>
-</footer>
+  <section id="about">
+    <div class="section">
+      <p class="section-title">About</p>
+      <div class="about-text">
+        <p>
+          I'm an electrical engineering student at Texas A&amp;M University with a focus on
+          power electronics, PCB design, circuit simulation, and machine learning.
+          I enjoy working at the intersection of hardware and software — from designing
+          converter topologies in LTSpice to training models on embedded signal data.
+        </p>
+        <p>
+          Currently seeking internship and research opportunities where I can contribute
+          to real engineering challenges.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<!-- SCROLL INDICATOR -->
-<div id="scroll-hint">
+  <hr class="divider" />
+
+  <section id="education" class="reveal">
+    <div class="section">
+      <p class="section-title">Education</p>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-date">2024 – Present<br>(Expected May 2028)</div>
+          <div class="entry-body">
+            <div class="entry-role">B.S. Electrical Engineering, Minor in Math</div>
+            <div class="entry-org">Texas A&amp;M University</div>
+            <div class="entry-desc">
+              GPA: 3.46 / 4.0 — Coursework in power electronics, analog and digital circuits,
+              signal processing, embedded systems, and machine learning.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="skills" class="reveal">
+    <div class="section">
+      <p class="section-title">Skills</p>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <div class="skill-group-name">Power Electronics</div>
+          <div class="skill-pills">
+            <span class="skill">DC-DC Converters</span>
+            <span class="skill">Motor Drives</span>
+            <span class="skill">Control Systems</span>
+            <span class="skill">Thermal Design</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">Circuit Simulation</div>
+          <div class="skill-pills">
+            <span class="skill">LTSpice</span>
+            <span class="skill">Multisim</span>
+            <span class="skill">MATLAB / Simulink</span>
+            <span class="skill">SPICE Analysis</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">PCB Design</div>
+          <div class="skill-pills">
+            <span class="skill">KiCad</span>
+            <span class="skill">Altium Designer</span>
+            <span class="skill">Schematic Capture</span>
+            <span class="skill">Layout &amp; Routing</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">Python &amp; ML</div>
+          <div class="skill-pills">
+            <span class="skill">NumPy / SciPy</span>
+            <span class="skill">PyTorch</span>
+            <span class="skill">Scikit-learn</span>
+            <span class="skill">Matplotlib</span>
+            <span class="skill">SymPy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="projects" class="reveal">
+    <div class="section">
+      <p class="section-title">Projects</p>
+      <div class="projects">
+        <div class="project">
+          <div class="project-header">
+            <div class="project-title">Buck-Boost Converter Design</div>
+            <div class="project-links">
+              <a class="project-link" href="#" target="_blank">GitHub ↗</a>
+            </div>
+          </div>
+          <p class="project-desc">
+            Designed and simulated a synchronous buck-boost converter with closed-loop PID control.
+            Validated in LTSpice and built a hardware prototype achieving 94% efficiency.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">LTSpice</span>
+            <span class="project-tag">Power Electronics</span>
+            <span class="project-tag">PCB Design</span>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-header">
+            <div class="project-title">PCB Sensor Array</div>
+            <div class="project-links">
+              <a class="project-link" href="#" target="_blank">GitHub ↗</a>
+            </div>
+          </div>
+          <p class="project-desc">
+            4-layer PCB for a multi-sensor data acquisition system with onboard signal conditioning,
+            16-bit ADC, and STM32 microcontroller for industrial monitoring.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">KiCad</span>
+            <span class="project-tag">Altium</span>
+            <span class="project-tag">STM32</span>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-header">
+            <div class="project-title">ML Fault Detection System</div>
+            <div class="project-links">
+              <a class="project-link" href="#" target="_blank">GitHub ↗</a>
+            </div>
+          </div>
+          <p class="project-desc">
+            CNN classifier in PyTorch trained to identify electrical fault signatures from
+            time-series current waveforms — 97.3% accuracy across 12 fault classes.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">PyTorch</span>
+            <span class="project-tag">Signal Analysis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="experience" class="reveal">
+    <div class="section">
+      <p class="section-title">Experience</p>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-date">Summer 2024</div>
+          <div class="entry-body">
+            <div class="entry-role">Engineering Intern</div>
+            <div class="entry-org">Company Name</div>
+            <div class="entry-desc">
+              Describe what you worked on, what you built, and the impact you had.
+              Include tools and technologies used.
+            </div>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-date">2023 – Present</div>
+          <div class="entry-body">
+            <div class="entry-role">Research Assistant</div>
+            <div class="entry-org">Research Lab / Group Name</div>
+            <div class="entry-desc">
+              Describe any on-campus research, lab projects, or faculty collaboration.
+            </div>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-date">2022 – Present</div>
+          <div class="entry-body">
+            <div class="entry-role">Project Lead</div>
+            <div class="entry-org">Student Organization / IEEE Chapter</div>
+            <div class="entry-desc">
+              Clubs, design teams, hackathons, or other leadership roles.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="contact" class="reveal">
+    <div class="section">
+      <p class="section-title">Contact</p>
+      <p class="contact-note">
+        Open to internships, research collaborations, and interesting projects.
+        Best way to reach me is by email.
+      </p>
+      <div class="contact-items">
+        <a class="contact-item" href="mailto:you@email.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          you@email.com
+        </a>
+        <a class="contact-item" href="https://github.com/yourusername" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+          </svg>
+          github.com/yourusername
+        </a>
+        <a class="contact-item" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+          linkedin.com/in/yourprofile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Blake Linders</span>
+    <span>Electrical Engineer</span>
+  </footer>
+
+</div> <div id="scroll-hint">
   <span>scroll</span>
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <path d="M12 5v14M5 12l7 7 7-7"/>

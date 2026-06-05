@@ -1,20 +1,12 @@
-/* ================================================================
-   script.js
-================================================================ */
-
+// Setup
 const NAV_HEIGHT = 56;
 
-/* ── FORCE TOP ON EVERY LOAD/REFRESH ────────────────────────────
-   Browsers cache scroll position — this overrides that so the
-   hero always starts large and the page always starts at top.
-────────────────────────────────────────────────────────────────── */
 if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual'; // stop browser restoring scroll
+  history.scrollRestoration = 'manual';
 }
-window.scrollTo(0, 0); // always start at very top
+window.scrollTo(0, 0);
 
-/* ── 1. SCROLL SPY ──────────────────────────────────────────────
-────────────────────────────────────────────────────────────────── */
+// Scroll Spy
 const SECTION_IDS = ['about', 'education', 'skills', 'projects', 'experience', 'contact'];
 
 function setActiveLink(activeId) {
@@ -25,9 +17,10 @@ function setActiveLink(activeId) {
 }
 
 function onScroll() {
-  const scrollY  = window.scrollY;
-  const trigger  = scrollY + window.innerHeight / 3;
-  let   activeId = null;
+  const scrollY      = window.scrollY;
+  const trigger      = scrollY + window.innerHeight / 3;
+  const atBottom     = window.scrollY + window.innerHeight >= document.body.scrollHeight - 10;
+  let   activeId     = null;
 
   SECTION_IDS.forEach(id => {
     const el = document.getElementById(id);
@@ -37,14 +30,15 @@ function onScroll() {
   });
 
   if (scrollY < 80) activeId = null;
+  if (atBottom) activeId = 'contact';
+
   setActiveLink(activeId);
 }
 
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-/* ── 2. MOBILE MENU ─────────────────────────────────────────────
-────────────────────────────────────────────────────────────────── */
+// Mobile Menu
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('nav-links');
 
@@ -71,8 +65,7 @@ document.addEventListener('click', e => {
   }
 });
 
-/* ── 3. SECTION REVEAL ──────────────────────────────────────────
-────────────────────────────────────────────────────────────────── */
+// Section Reveal
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -90,36 +83,31 @@ setTimeout(() => {
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 }, 150);
 
-/* ── 3b. ABOUT FADE ─────────────────────────────────────────────
-   Only triggers after actual scroll, never on load/refresh.
-────────────────────────────────────────────────────────────────── */
-const aboutSection = document.getElementById('about');
-let aboutVisible = false;
+// Main Content Fade
+const mainContent = document.getElementById('main-content');
+let contentVisible = false;
 
-function checkAbout() {
-  if (aboutVisible) return;
-  if (window.scrollY > 30) { // raised from 0 to 30 so refresh cant trigger it
-    aboutSection.classList.add('visible');
-    aboutVisible = true;
-    window.removeEventListener('scroll', checkAbout);
+function checkContent() {
+  if (contentVisible) return;
+  if (window.scrollY > 30) {
+    mainContent.classList.add('visible');
+    contentVisible = true;
+    window.removeEventListener('scroll', checkContent);
   }
 }
 
-window.addEventListener('scroll', checkAbout, { passive: true });
+window.addEventListener('scroll', checkContent, { passive: true });
 
-/* ── 3c. HERO SHRINK ────────────────────────────────────────────
-   Only triggers after actual scroll, never on load/refresh.
-────────────────────────────────────────────────────────────────── */
+// Hero Shrink
 const heroSection = document.getElementById('hero');
 let heroShrunk = false;
-
 const linksBar = document.getElementById('links');
 
 function checkHero() {
   if (heroShrunk) return;
   if (window.scrollY > 30) {
     heroSection.classList.remove('hero-large');
-    linksBar.classList.remove('links-large');  // shrinks with hero
+    linksBar.classList.remove('links-large');
     heroShrunk = true;
     window.removeEventListener('scroll', checkHero);
   }
@@ -127,25 +115,21 @@ function checkHero() {
 
 window.addEventListener('scroll', checkHero, { passive: true });
 
-/* ── 4. SMOOTH SCROLL WITH OFFSET ───────────────────────────────
-   Accounts for the hero being large when clicking nav buttons
-   before scrolling — the extra hero padding shifts all section
-   positions down, so we measure the extra offset and add it.
-────────────────────────────────────────────────────────────────── */
+// Smooth Scroll With Offset
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const target = document.querySelector(this.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
 
-    /* If hero is still large, shrink it first then scroll */
     if (!heroShrunk) {
       heroSection.classList.remove('hero-large');
       linksBar.classList.remove('links-large');
       heroShrunk = true;
-      aboutSection.classList.add('visible');
-      aboutVisible = true;
-      /* wait for the CSS transition (0.6s) to finish before scrolling */
+      
+      mainContent.classList.add('visible');
+      contentVisible = true;
+      
       setTimeout(() => {
         const top = target.getBoundingClientRect().top + window.scrollY - NAV_HEIGHT - 16;
         window.scrollTo({ top, behavior: 'smooth' });
@@ -157,8 +141,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-/* ── 5. SCROLL HINT ─────────────────────────────────────────────
-────────────────────────────────────────────────────────────────── */
+// Scroll Hint
 const scrollHint = document.getElementById('scroll-hint');
 
 function hideScrollHint() {
