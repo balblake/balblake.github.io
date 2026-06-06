@@ -36,8 +36,8 @@ document.addEventListener('click', e => {
 // Section Reveal
 // 1. Check if the current page is index.html, about.html, or the root directory
 const currentPage = window.location.pathname;
-const isOneWayPage = currentPage.endsWith('index.html') || 
-                     currentPage.endsWith('about.html');
+const isOneWayPage = currentPage.endsWith('.io') || 
+                     currentPage.endsWith('about');
 
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
