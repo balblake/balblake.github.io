@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blake Linders — About</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <nav id="nav">
+        <a href="index.html" class="nav-name">Blake Linders</a>
+        <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="about.html" class="nav-active">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="hero">
+        <div class="hero-inner reveal">
+            <div class="hero-photo">
+                <img src="images/selfie.jpeg" alt="Blake Linders" onerror="this.style.display='none'" />
+            </div>
+            <div class="hero-text">
+                <h1 class="hero-name">Blake Linders</h1>
+                <p class="hero-title">Electrical Engineering Student</p>
+                <p class="hero-location">College Station, TX · Texas A&amp;M University</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-subpage-content reveal">
+        <section id="about">
+            <div class="section">
+                <h2 class="section-title">Biography</h2>
+                <div class="about-text large-text">
+                    <p>
+                        I am an Electrical Engineering student at Texas A&amp;M University minoring in
+                        Mathematics, with an expected graduation in May 2028. My academic focus spans Power Systems,
+                        semiconductors, and microcontrollers.
+                    </p>
+                    <p>
+                        Through coursework, an academic internship, and independent projects, I have built a strong
+                        foundation in both programmatic and hardware problem-solving. I leverage my experience analyzing
+                        complex datasets and programming various FPGAs to engineer tangible solutions, including
+                        embedded security systems, traffic control logic, and data acquisition tools.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="personal">
+            <div class="section">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-text large-text">
+                    <p>
+                        Beyond the lab and the lecture hall, a significant part of my life was dedicated to the marching
+                        arts. I have spent multiple seasons performing at a world-class level with drum and bugle corps,
+                        including serving as the Bassline Section Leader for the Blue Stars.
+                    </p>
+                    <p>
+                        The drum corps activity requires an extreme level of physical discipline, exact timing, and
+                        thousands of hours of repetitive refinement to achieve perfection on the field. I also apply
+                        these principles as a Drumline Technician, instructing high school percussionists. The
+                        leadership, resilience, and attention to detail I've cultivated in the marching arts directly
+                        translate to my engineering work—teaching me how to break down complex, multi-layered problems
+                        and lead a team toward a unified goal.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <span>© 2026 Blake Linders</span>
+            <span>Electrical Engineer</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

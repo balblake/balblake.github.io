@@ -129,7 +129,7 @@ hr.divider {
 /* Hero */
 #hero {
   padding-top: calc(56px + 4rem);
-  padding-bottom: 3rem;
+  padding-bottom: 0.5rem;
 }
 
 .hero-inner {
@@ -289,7 +289,15 @@ hr.divider {
 .link-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
 
 /* About */
-#about .section-title { margin-bottom: 1rem; }
+#about .section-title, #personal .section-title { margin-bottom: 0.5rem; }
+
+#about .section {
+  padding-bottom: 2rem;
+}
+
+#personal .section {
+  padding-top: 2rem;
+}
 
 .about-text {
   font-size: .97rem;
@@ -523,38 +531,448 @@ footer {
   }
 }
 
-/* Scroll Hint */
-#scroll-hint {
-  position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .35rem;
-  color: var(--text-3);
-  font-size: .75rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  pointer-events: none;
-  z-index: 99;
-  opacity: 1;
-  transition: opacity .6s ease;
-  animation: bob 1.8s ease-in-out infinite;
-}
-
-#scroll-hint.hidden {
-  opacity: 0;
-}
-
-#scroll-hint svg {
-  width: 16px;
-  height: 16px;
-}
-
 /* Keyframes */
 @keyframes bob {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50%       { transform: translateX(-50%) translateY(6px); }
+}
+
+/* Multi-page specific additions */
+.nav-resume-btn {
+  background: var(--green) !important;
+  color: #fff !important;
+  font-weight: 500;
+  border: 1px solid var(--green);
+}
+
+.nav-resume-btn:hover {
+  background: var(--green-l) !important;
+  border-color: var(--green-l);
+}
+
+/* Container for subpages to offset the fixed nav and fade in */
+.subpage-content {
+  padding-top: 80px; 
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.about-subpage-content {
+  padding-top: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* --- NEW STYLES FOR REDESIGNED PAGES --- */
+
+/* Larger text for About section */
+.large-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Dedicated Resume Page Styles */
+.resume-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.resume-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.resume-contact {
+  color: var(--text-2);
+  margin-bottom: 1.5rem;
+}
+.resume-contact a {
+  color: var(--green-l);
+  margin: 0 0.5rem;
+}
+.download-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--green);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.download-btn:hover {
+  background: var(--green-l);
+}
+.resume-item {
+  margin-bottom: 1rem;
+}
+.resume-item-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.resume-item-sub {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-2);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.resume-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--text-2);
+  font-size: 0.95rem;
+}
+.resume-list li {
+  margin-bottom: 0.3rem;
+}
+.resume-skills p {
+  margin-bottom: 0.5rem;
+  color: var(--text-2);
+}
+.resume-skills strong {
+  color: var(--text);
+}
+
+/* Skills Origins Page */
+.origin-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.origin-header h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+.origin-source {
+  color: var(--green-l);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.origin-body p {
+  color: var(--text-2);
+  margin-bottom: 1.5rem;
+}
+
+/* Large Projects Page */
+.large-project {
+  margin-bottom: 2rem;
+}
+.lp-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.lp-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-3);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+.lp-github {
+  color: var(--green-l);
+}
+.lp-media-placeholder {
+  width: 100%;
+  height: 400px;
+  background: var(--bg-card);
+  border: 2px dashed var(--border-2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-3);
+  margin-bottom: 2rem;
+}
+.lp-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+.lp-column h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+.lp-column p {
+  color: var(--text-2);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Contact Grid */
+.contact-lead {
+  font-size: 1.2rem;
+  color: var(--text-2);
+  margin-bottom: 3rem;
+  max-width: 100%;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--green);
+}
+
+.cc-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 1.8rem auto;
+  color: var(--green);
+}
+
+.contact-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+}
+
+.contact-card p {
+  color: var(--text-2);
+  font-size: 1.05rem;
+}
+
+/* Responsive stacking for contact cards */
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .lp-content {
+    grid-template-columns: 1fr;
+  }
+  .lp-media-placeholder {
+    height: 250px;
+  }
+  .resume-item-header, .resume-item-sub {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ══════════════════════════════════════
+   SKILLS PAGE STYLES
+   ══════════════════════════════════════ */
+
+/* Seeking Badge */
+.seeking-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .45rem 1.1rem;
+  background: rgba(61, 140, 104, .08);
+  border: 1px solid rgba(61, 140, 104, .25);
+  border-radius: 4px;
+  font-size: .82rem;
+  color: var(--green-l);
+  font-weight: 500;
+  margin-bottom: 3rem;
+  margin-top: .5rem;
+}
+.seeking-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green-l);
+  flex-shrink: 0;
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .2; }
+}
+
+/* Skill Category Card */
+.skill-cat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.4rem;
+  transition: border-color .2s;
+}
+.skill-cat-card:hover {
+  border-color: var(--border-2);
+}
+.skill-cat-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.skill-cat-left {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+}
+.skill-cat-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  background: rgba(61, 140, 104, .1);
+  border: 1px solid rgba(61, 140, 104, .2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--green-l);
+}
+.skill-cat-icon svg {
+  width: 18px;
+  height: 18px;
+}
+.skill-cat-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: .15rem;
+}
+.skill-cat-source {
+  font-size: .78rem;
+  color: var(--text-3);
+}
+.skill-cat-badge {
+  font-size: .74rem;
+  color: #9c9c9cb5;
+  background: rgba(0, 0, 0, 0.158);
+  border: 1px solid rgb(170, 170, 170);
+  padding: .2rem .65rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+.skill-cat-desc {
+  font-size: .88rem;
+  color: var(--text-2);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+/* Key skill pill variant */
+.skill.key {
+  color: var(--green-l);
+  border-color: rgba(61, 140, 104, .35);
+  background: rgba(61, 140, 104, .06);
+}
+
+/* Tools Grid */
+.tools-wrap {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+.tools-label {
+  font-family: 'Andale Mono', monospace;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--green-l);
+  margin-bottom: .4rem;
+}
+.tools-sub {
+  font-size: .85rem;
+  color: var(--text-3);
+  margin-bottom: 1.4rem;
+}
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+  gap: .6rem;
+}
+.tool-chip {
+  font-size: .82rem;
+  color: var(--text-2);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: .55rem .8rem;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.4;
+  transition: color .2s, border-color .2s;
+}
+.tool-chip:hover {
+  color: var(--text);
+  border-color: var(--border-2);
+}
+
+/* Currently Learning */
+.learning-wrap {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+.learning-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+  transition: border-color .2s;
+}
+.learning-card:hover {
+  border-color: var(--border-2);
+}
+.learning-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: .25rem;
+}
+.learning-sub {
+  font-size: .8rem;
+  color: var(--text-3);
+  line-height: 1.6;
+}
+
+/* Skills page responsive */
+@media (max-width: 680px) {
+  .skill-cat-top {
+    flex-direction: column;
+    gap: .75rem;
+  }
+  .tools-grid {
+    grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+  }
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
 }
