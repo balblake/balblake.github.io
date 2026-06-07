@@ -306,6 +306,13 @@ hr.divider {
 }
 .about-text p + p { margin-top: 1rem; }
 
+#skills .about-text {
+  font-size: .97rem;
+  color: var(--text-2);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+}
+
 /* Entries */
 .entries { display: flex; flex-direction: column; gap: 2rem; }
 
@@ -780,34 +787,6 @@ footer {
 /* ══════════════════════════════════════
    SKILLS PAGE STYLES
    ══════════════════════════════════════ */
-
-/* Seeking Badge */
-.seeking-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: .55rem;
-  padding: .45rem 1.1rem;
-  background: rgba(61, 140, 104, .08);
-  border: 1px solid rgba(61, 140, 104, .25);
-  border-radius: 4px;
-  font-size: .82rem;
-  color: var(--green-l);
-  font-weight: 500;
-  margin-bottom: 3rem;
-  margin-top: .5rem;
-}
-.seeking-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--green-l);
-  flex-shrink: 0;
-  animation: blink 2s ease-in-out infinite;
-}
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: .2; }
-}
 
 /* Skill Category Card */
 .skill-cat-card {
