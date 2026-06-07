@@ -138,6 +138,7 @@ hr.divider {
   padding: 0 2rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2.5rem;
 }
 
@@ -198,9 +199,10 @@ hr.divider {
 }
 
 #hero.hero-large .hero-inner {
-  max-width: 1200px;
+  max-width: 950px;
   margin: 0 auto;
-  padding-left: 11rem;
+  padding: 0 2rem;
+  justify-content: center;
 }
 
 #hero.hero-large .hero-name {
@@ -523,10 +525,13 @@ footer {
     padding-bottom: 3rem;
   }
 
+@media (max-width: 680px) {
   #hero.hero-large .hero-inner {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+    justify-content: flex-start;
   }
+}
 
   #hero.hero-large .hero-photo {
     width: 110px;
