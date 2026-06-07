@@ -955,9 +955,3 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-/* ── Skills page: extra gap between title and first card ── */
-/* This is the fix — .section-title already has margin-bottom: 1.8rem  */
-/* but the skills cards need a bit more breathing room.                 */
-.skill-cat-card:first-of-type {
-  margin-top: 1rem;
-}
