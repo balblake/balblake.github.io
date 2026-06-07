@@ -1,293 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blake Linders — Skills</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blake Linders — Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-    <!-- Nav -->
-    <nav id="nav">
-        <a href="/" class="nav-name">Blake Linders</a>
-        <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="about">About</a></li>
-            <li><a href="resume">Resume</a></li>
-            <li><a href="skills" class="nav-active">Skills</a></li>
-            <li><a href="projects">Projects</a></li>
-            <li><a href="contact">Contact</a></li>
-        </ul>
-    </nav>
+<nav id="nav">
+  <a href="/" class="nav-name">Blake Linders</a>
+  <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="about">About</a></li>
+    <li><a href="resume">Resume</a></li>
+    <li><a href="skills" class="nav-active">Skills</a></li>
+    <li><a href="projects">Projects</a></li>
+    <li><a href="contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <!-- Page Content -->
-    <div class="subpage-content">
-        <div class="section">
+<div class="subpage-content">
+  <section class="reveal">
+    <div class="section">
 
-            <!-- Header -->
-            <p class="section-title">Technical Profile</p>
+      <p class="section-title">Technical Skills</p>
 
-            <!-- Intro -->
-            <section id="skills">
-                <p class="about-text reveal">
-                    A hands-on skill set built through rigorous coursework at Texas A&amp;M,
-                    a USIP academic data internship, and independent engineering projects —
-                    spanning hardware validation, digital systems design, and machine learning.
-                    Every skill listed has been applied in a real lab, internship, or project context.
-                </p>
-            </section>
+      <!-- ── Skill Category Cards ───────────────────────────────── -->
 
-            <!-- ══════════════════════════
-           CATEGORY 1 — Hardware
-           ══════════════════════════ -->
-            <div class="skill-cat-card reveal">
-                <div class="skill-cat-top">
-                    <div class="skill-cat-left">
-                        <div class="skill-cat-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="1.6">
-                                <rect x="7" y="7" width="10" height="10" rx="1" />
-                                <path d="M9 7V4M12 7V4M15 7V4
-                         M9 20v-3M12 20v-3M15 20v-3
-                         M4 9h3M4 12h3M4 15h3
-                         M17 9h3M17 12h3M17 15h3" />
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="skill-cat-name">Hardware &amp; Digital Systems Design</div>
-                            <div class="skill-cat-source">ECEN 248 &middot; ECEN 214 &middot; Independent Projects</div>
-                        </div>
-                    </div>
-                    <span class="skill-cat-badge">Core EE Skill</span>
-                </div>
-                <p class="skill-cat-desc">
-                    Developed through extensive lab work designing physical circuits, deploying
-                    Finite State Machines on FPGAs, and characterizing components using oscilloscopes.
-                    Applied directly to hardware validation — measuring I/V curves, verifying timing
-                    sequences, integrating clock dividers, and driving LED outputs on a ZYBO Z7-10 board.
-                    These are the exact competencies targeted by hardware validation and ASIC verification roles.
-                </p>
-                <div class="skill-pills">
-                    <span class="skill key">Verilog (Behavioral &amp; Structural)</span>
-                    <span class="skill key">FPGA (ZYBO Z7-10)</span>
-                    <span class="skill key">Vivado</span>
-                    <span class="skill key">Oscilloscope</span>
-                    <span class="skill key">Finite State Machines</span>
-                    <span class="skill key">LTspice</span>
-                    <span class="skill key">Circuit Theory</span>
-                    <span class="skill key">Clock Dividers</span>
-                    <span class="skill key">Breadboard Prototyping</span>
-                    <span class="skill key">DAQ</span>
-                    <span class="skill key">Multimeters</span>
-                    <span class="skill key">Op-Amps</span>
-                    <span class="skill key">Logic Gates</span>
-                    <span class="skill key">Signal Processing</span>
-                </div>
+      <!-- Card 1: Hardware & Digital Systems -->
+      <div class="skill-cat-card">
+        <div class="skill-cat-top">
+          <div class="skill-cat-left">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <rect x="7" y="7" width="10" height="10" rx="1"/>
+                <path d="M7 9H5M7 12H4M7 15H5M17 9h2M17 12h3M17 15h2M9 7V5M12 7V4M15 7V5M9 17v2M12 17v3M15 17v2"/>
+              </svg>
             </div>
-
-            <!-- ══════════════════════════
-           CATEGORY 2 — Data Science
-           ══════════════════════════ -->
-            <div class="skill-cat-card reveal">
-                <div class="skill-cat-top">
-                    <div class="skill-cat-left">
-                        <div class="skill-cat-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="1.6">
-                                <path d="M3 3v18h18" />
-                                <path d="M7 16l4-4 4 4 4-6" />
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="skill-cat-name">Data Science &amp; Machine Learning</div>
-                            <div class="skill-cat-source">USIP Internship &middot; ECEN 250 &middot; Katzberg Institute
-                            </div>
-                        </div>
-                    </div>
-                    <span class="skill-cat-badge">Internship Proven</span>
-                </div>
-                <p class="skill-cat-desc">
-                    Cultivated through an intensive USIP academic internship and specialized coursework.
-                    Hands-on experience calculating VGG16 CNN weights, mapping decision tree boundaries,
-                    and executing K-means clustering iterations in Python. Applied Business Intelligence
-                    frameworks to extract actionable insights from large-scale datasets including Grammy
-                    product analytics and Intel sustainability data — bridging academic theory with
-                    industry practice under dual faculty and industry guidance.
-                </p>
-                <div class="skill-pills">
-                    <span class="skill key">Python</span>
-                    <span class="skill key">TensorFlow &amp; PyTorch</span>
-                    <span class="skill key">Scikit-learn</span>
-                    <span class="skill key">Pandas &amp; NumPy</span>
-                    <span class="skill key">K-Means Clustering</span>
-                    <span class="skill key">CNNs (VGG16)</span>
-                    <span class="skill key">Decision Trees</span>
-                    <span class="skill key">SQL</span>
-                    <span class="skill key">Tableau</span>
-                    <span class="skill key">Plotly &amp; Matplotlib</span>
-                    <span class="skill key">SymPy</span>
-                    <span class="skill key">Business Intelligence</span>
-                    <span class="skill key">Data Analysis</span>
-                </div>
+            <div>
+              <div class="skill-cat-name">Hardware &amp; Digital Systems Design</div>
+              <div class="skill-cat-source">ECEN 248 · ECEN 214 · Independent Projects</div>
             </div>
-
-            <!-- ══════════════════════════
-           CATEGORY 3 — Software
-           ══════════════════════════ -->
-            <div class="skill-cat-card reveal">
-                <div class="skill-cat-top">
-                    <div class="skill-cat-left">
-                        <div class="skill-cat-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="1.6">
-                                <path d="M8 6L2 12l6 6M16 6l6 6-6 6M13 4l-2 16" />
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="skill-cat-name">Software Engineering &amp; Computing</div>
-                            <div class="skill-cat-source">CSCE 120 &middot; Applied Mathematics &middot; Independent
-                                Study</div>
-                        </div>
-                    </div>
-                    <span class="skill-cat-badge">CS Foundation</span>
-                </div>
-                <p class="skill-cat-desc">
-                    Built through formal CS coursework at Texas A&amp;M and applied mathematics —
-                    focusing on efficient algorithm design, programmatic logic, and structured
-                    problem-solving. Supplemented by independent web development, REST API integration,
-                    and version-controlled workflows using Git and GitHub across all academic projects.
-                </p>
-                <div class="skill-pills">
-                    <span class="skill key">C++</span>
-                    <span class="skill key">MATLAB / Simulink</span>
-                    <span class="skill key">Git / GitHub</span>
-                    <span class="skill key">JavaScript</span>
-                    <span class="skill key">HTML &amp; CSS</span>
-                    <span class="skill key">Java</span>
-                    <span class="skill key">REST APIs</span>
-                    <span class="skill key">Algorithm Design</span>
-                </div>
-            </div>
-
-            <!-- ══════════════════════════
-           CATEGORY 4 — IoT
-           ══════════════════════════ -->
-            <div class="skill-cat-card reveal">
-                <div class="skill-cat-top">
-                    <div class="skill-cat-left">
-                        <div class="skill-cat-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="1.6">
-                                <path d="M5 12.55a11 11 0 0114.08 0" />
-                                <path d="M1.42 9a16 16 0 0121.16 0" />
-                                <path d="M8.53 16.11a6 6 0 016.95 0" />
-                                <circle cx="12" cy="20" r=".5" fill="currentColor" />
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="skill-cat-name">IoT &amp; Embedded Systems</div>
-                            <div class="skill-cat-source">Independent Study &middot; IoT Development</div>
-                        </div>
-                    </div>
-                    <span class="skill-cat-badge">Independent Projects</span>
-                </div>
-                <p class="skill-cat-desc">
-                    Acquired through hands-on development of personal IoT initiatives — integrating
-                    hardware sensors with web interfaces, REST API communication, and organized version
-                    control workflows. Directly bridges the gap between physical hardware and software
-                    systems, a key competency for embedded systems and firmware engineering roles.
-                </p>
-                <div class="skill-pills">
-                    <span class="skill key">IoT Systems</span>
-                    <span class="skill key">Embedded Systems</span>
-                    <span class="skill key">REST APIs</span>
-                    <span class="skill key">Git / GitHub</span>
-                    <span class="skill key">JavaScript</span>
-                    <span class="skill key">HTML &amp; CSS</span>
-                    <span class="skill key">Sensor Integration</span>
-                </div>
-            </div>
-
-            <!-- ══════════════════════════
-           TOOLS GRID
-           ══════════════════════════ -->
-            <div class="tools-wrap reveal">
-                <p class="tools-label">Tools &amp; Software</p>
-                <p class="tools-sub">Every tool listed has been used in coursework, internship work, or independent
-                    projects</p>
-                <div class="tools-grid">
-                    <div class="tool-chip">Vivado</div>
-                    <div class="tool-chip">LTspice</div>
-                    <div class="tool-chip">MATLAB</div>
-                    <div class="tool-chip">Simulink</div>
-                    <div class="tool-chip">Tableau</div>
-                    <div class="tool-chip">Git / GitHub</div>
-                    <div class="tool-chip">VS Code</div>
-                    <div class="tool-chip">Jupyter Notebook</div>
-                    <div class="tool-chip">Oscilloscope</div>
-                    <div class="tool-chip">DAQ</div>
-                    <div class="tool-chip">Multimeter</div>
-                    <div class="tool-chip">Breadboard</div>
-                    <div class="tool-chip">NumPy</div>
-                    <div class="tool-chip">Pandas</div>
-                    <div class="tool-chip">Matplotlib</div>
-                    <div class="tool-chip">Plotly</div>
-                    <div class="tool-chip">Scikit-learn</div>
-                    <div class="tool-chip">TensorFlow</div>
-                    <div class="tool-chip">PyTorch</div>
-                    <div class="tool-chip">SymPy</div>
-                </div>
-            </div>
-
-            <!-- ══════════════════════════
-           CURRENTLY LEARNING
-           ══════════════════════════ -->
-            <div class="learning-wrap reveal">
-                <p class="tools-label">Currently Learning</p>
-                <p class="tools-sub">Skills actively being developed to prepare for Summer 2026 roles</p>
-                <div class="learning-grid">
-                    <div class="learning-card">
-                        <div class="learning-title">SystemVerilog</div>
-                        <div class="learning-sub">Industry-standard HDL used in ASIC verification and hardware
-                            validation roles</div>
-                    </div>
-                    <div class="learning-card">
-                        <div class="learning-title">UVM Testbenches</div>
-                        <div class="learning-sub">Universal Verification Methodology for structured hardware simulation
-                        </div>
-                    </div>
-                    <div class="learning-card">
-                        <div class="learning-title">Embedded C</div>
-                        <div class="learning-sub">Low-level programming for microcontroller and firmware development
-                        </div>
-                    </div>
-                    <div class="learning-card">
-                        <div class="learning-title">Deep Learning</div>
-                        <div class="learning-sub">Expanding CNN and transformer architecture knowledge beyond coursework
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          </div>
+          <span class="skill-cat-badge">Core Focus</span>
         </div>
+        <p class="skill-cat-desc">
+          Developed through rigorous lab hours designing and deploying physical circuits, programming FPGAs with Behavioral and Structural Verilog, and validating hardware behavior against theoretical models using oscilloscopes and breadboards.
+        </p>
+        <div class="skill-pills">
+          <span class="skill key">Verilog</span>
+          <span class="skill key">FPGA (ZYBO Z7-10)</span>
+          <span class="skill key">Vivado</span>
+          <span class="skill key">Finite State Machines</span>
+          <span class="skill">Oscilloscope</span>
+          <span class="skill">LTspice</span>
+          <span class="skill">Circuit Theory</span>
+          <span class="skill">Clock Dividers</span>
+          <span class="skill">Breadboard Prototyping</span>
+          <span class="skill">DAQ</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Data Science & Machine Learning -->
+      <div class="skill-cat-card">
+        <div class="skill-cat-top">
+          <div class="skill-cat-left">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/>
+                <path d="M12 7v4M12 11l-5.5 6.5M12 11l5.5 6.5"/>
+              </svg>
+            </div>
+            <div>
+              <div class="skill-cat-name">Data Science &amp; Machine Learning</div>
+              <div class="skill-cat-source">USIP Internship · ECEN 250 · Katzberg Institute</div>
+            </div>
+          </div>
+          <span class="skill-cat-badge">Applied</span>
+        </div>
+        <p class="skill-cat-desc">
+          Cultivated through an academic internship and specialized coursework focused on neural network architectures, predictive modeling, and large-scale data extraction. Applied K-means clustering, decision tree analysis, and CNN weight calculations to real-world datasets.
+        </p>
+        <div class="skill-pills">
+          <span class="skill key">Python</span>
+          <span class="skill key">PyTorch</span>
+          <span class="skill key">TensorFlow</span>
+          <span class="skill key">Scikit-learn</span>
+          <span class="skill">Pandas &amp; NumPy</span>
+          <span class="skill">Matplotlib / Plotly</span>
+          <span class="skill">SQL</span>
+          <span class="skill">Tableau</span>
+          <span class="skill">K-Means Clustering</span>
+          <span class="skill">CNNs</span>
+          <span class="skill">Decision Trees</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Software Engineering & Computing -->
+      <div class="skill-cat-card">
+        <div class="skill-cat-top">
+          <div class="skill-cat-left">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div>
+              <div class="skill-cat-name">Software Engineering &amp; Computing</div>
+              <div class="skill-cat-source">CSCE 120 · Applied Mathematics · MATLAB coursework</div>
+            </div>
+          </div>
+          <span class="skill-cat-badge">Academic</span>
+        </div>
+        <p class="skill-cat-desc">
+          Built through foundational computer science courses and applied mathematics, focusing on efficient algorithm design, system modeling, and symbolic computation for engineering problem-solving.
+        </p>
+        <div class="skill-pills">
+          <span class="skill key">C++</span>
+          <span class="skill key">MATLAB</span>
+          <span class="skill key">Simulink</span>
+          <span class="skill">Java</span>
+          <span class="skill">SymPy</span>
+          <span class="skill">Algorithm Design</span>
+          <span class="skill">Differential Equations</span>
+          <span class="skill">Linear Algebra</span>
+        </div>
+      </div>
+
+      <!-- Card 4: Web & Personal Projects -->
+      <div class="skill-cat-card">
+        <div class="skill-cat-top">
+          <div class="skill-cat-left">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+              </svg>
+            </div>
+            <div>
+              <div class="skill-cat-name">Web Development &amp; Personal Projects</div>
+              <div class="skill-cat-source">Independent Study · IoT Development</div>
+            </div>
+          </div>
+          <span class="skill-cat-badge">Developing</span>
+        </div>
+        <p class="skill-cat-desc">
+          Acquired through hands-on independent projects — including this portfolio site — IoT hardware integrations, and REST API development. Focused on version control, clean code, and connecting hardware systems to web interfaces.
+        </p>
+        <div class="skill-pills">
+          <span class="skill key">JavaScript</span>
+          <span class="skill key">HTML &amp; CSS</span>
+          <span class="skill key">Git / GitHub</span>
+          <span class="skill">REST APIs</span>
+          <span class="skill">IoT Systems</span>
+          <span class="skill">GitHub Pages</span>
+        </div>
+      </div>
+
+      <!-- ── All Tools Grid ─────────────────────────────────────── -->
+      <div class="tools-wrap">
+        <p class="tools-label">Complete Tool &amp; Tech Reference</p>
+        <p class="tools-sub">Every specific tool, language, or platform used across projects and coursework.</p>
+        <div class="tools-grid">
+          <div class="tool-chip">Vivado</div>
+          <div class="tool-chip">LTspice</div>
+          <div class="tool-chip">MATLAB</div>
+          <div class="tool-chip">Simulink</div>
+          <div class="tool-chip">Tableau</div>
+          <div class="tool-chip">Git / GitHub</div>
+          <div class="tool-chip">Python</div>
+          <div class="tool-chip">PyTorch</div>
+          <div class="tool-chip">TensorFlow</div>
+          <div class="tool-chip">Scikit-learn</div>
+          <div class="tool-chip">NumPy</div>
+          <div class="tool-chip">Pandas</div>
+          <div class="tool-chip">Matplotlib</div>
+          <div class="tool-chip">Plotly</div>
+          <div class="tool-chip">SymPy</div>
+          <div class="tool-chip">C++</div>
+          <div class="tool-chip">Java</div>
+          <div class="tool-chip">Verilog</div>
+          <div class="tool-chip">SQL</div>
+          <div class="tool-chip">JavaScript</div>
+          <div class="tool-chip">HTML</div>
+          <div class="tool-chip">CSS</div>
+          <div class="tool-chip">FPGA (ZYBO Z7-10)</div>
+          <div class="tool-chip">Oscilloscope</div>
+          <div class="tool-chip">DAQ</div>
+          <div class="tool-chip">Multimeters</div>
+        </div>
+      </div>
+
+      <!-- ── Currently Learning ─────────────────────────────────── -->
+      <div class="learning-wrap">
+        <p class="tools-label">Currently Learning</p>
+        <div class="learning-grid">
+          <div class="learning-card">
+            <div class="learning-title">Power Systems &amp; Electronics</div>
+            <div class="learning-sub">Upcoming coursework in power conversion, transformers, and energy systems.</div>
+          </div>
+          <div class="learning-card">
+            <div class="learning-title">PCB Design</div>
+            <div class="learning-sub">Exploring KiCad for schematic capture and board layout on personal hardware projects.</div>
+          </div>
+          <div class="learning-card">
+            <div class="learning-title">Embedded Systems</div>
+            <div class="learning-sub">Expanding into microcontroller programming and sensor integration beyond FPGA work.</div>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <span>&copy; 2026 Blake Linders</span>
-        <span>Electrical Engineer</span>
-    </footer>
+  <footer>
+    <span>© 2026 Blake Linders</span>
+    <span>Electrical Engineer</span>
+  </footer>
+</div>
 
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
-
 </html>
