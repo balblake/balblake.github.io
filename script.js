@@ -34,7 +34,6 @@ document.addEventListener('click', e => {
 });
 
 // Section Reveal
-// 1. Check if the current page is index.html, about.html, or the root directory
 const currentPage = window.location.pathname;
 const isOneWayPage = currentPage.endsWith('.io') || 
                      currentPage.endsWith('/') ||
@@ -43,15 +42,11 @@ const isOneWayPage = currentPage.endsWith('.io') ||
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Always reveal the element when it comes into view
       entry.target.classList.add('visible');
-      
-      // If we are on Index or About, stop watching it so it never disappears
       if (isOneWayPage) {
         revealObserver.unobserve(entry.target);
       }
     } else {
-      // If we are NOT on Index or About, remove the class so it can reveal again
       if (!isOneWayPage) {
         entry.target.classList.remove('visible');
       }
