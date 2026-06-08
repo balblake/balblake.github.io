@@ -125,6 +125,7 @@ img { display: block; max-width: 100%; }
 hr.divider {
   border: none;
   border-top: 1px solid var(--border);
+  width: 100%;
   max-width: 950px;
   margin: 0 auto;
 }
