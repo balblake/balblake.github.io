@@ -497,7 +497,9 @@ footer {
 @media (max-width: 768px) {
   #nav { padding: 0 1.25rem; }
   .hero-inner, .section { padding-left: 1.25rem; padding-right: 1.25rem; }
-  .hero-inner { flex-direction: column; align-items: flex-start; gap: 1.4rem; }
+  
+  /* Centers horizontally and slightly tightens the gap between photo and text */
+  .hero-inner { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
   .entry { grid-template-columns: 1fr; gap: .3rem; }
   footer { flex-direction: column; gap: .5rem; text-align: center; }
 
@@ -512,12 +514,18 @@ footer {
   .nav-links li { width: 100%; }
   .nav-links a { display: block; width: 100%; padding: .65rem .9rem; font-size: .9rem; }
 
-  #hero, #hero.hero-large { min-height: 100vh; padding-top: 56px; padding-bottom: 0; align-items: center; }
-  #hero.hero-large .hero-inner { padding-left: 1.25rem; padding-right: 1.25rem; justify-content: flex-start; }
-  #hero.hero-large .hero-photo { width: 28vw !important; height: 28vw !important; min-width: 100px; min-height: 100px; }
-  #hero.hero-large .hero-name { font-size: clamp(2.4rem, 10vw, 3.4rem) !important; }
+  /* Added justify-content: center to properly center vertically */
+  #hero, #hero.hero-large { min-height: 100vh; padding-top: 56px; padding-bottom: 0; align-items: center; justify-content: center; }
   
-  .hero-nav-buttons { flex-wrap: wrap; justify-content: flex-start; gap: .4rem; }
+  /* Overrides the desktop left-alignment */
+  #hero.hero-large .hero-inner { padding-left: 1.25rem; padding-right: 1.25rem; justify-content: center; }
+  
+  /* Scales the photo down slightly so it doesn't force vertical scrolling */
+  #hero.hero-large .hero-photo { width: 24vw !important; height: 24vw !important; min-width: 90px; min-height: 90px; }
+  #hero.hero-large .hero-name { font-size: clamp(2.2rem, 10vw, 3rem) !important; }
+  
+  /* Centers the button grid and reduces top spacing */
+  .hero-nav-buttons { flex-wrap: wrap; justify-content: center; gap: .4rem; margin-top: 1.2rem; }
   .hero-nav-btn { flex: 1 1 calc(50% - .25rem); min-width: 0; padding: .6rem .75rem; }
   .hero-nav-btn-label { font-size: .65rem; }
   .hero-nav-btn-text { font-size: .85rem; }
