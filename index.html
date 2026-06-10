@@ -9,15 +9,13 @@
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script>try { var t = localStorage.getItem('theme') || 'dark'; document.documentElement.setAttribute('data-theme', t); } catch (e) { }</script>
 </head>
 
 <body>
 
     <nav id="nav">
         <a href="/" class="nav-name">Blake Linders</a>
-        <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-            <span></span><span></span><span></span>
-        </button>
         <ul class="nav-links" id="nav-links">
             <li><a href="about">About</a></li>
             <li><a href="resume">Resume</a></li>
@@ -25,6 +23,24 @@
             <li><a href="projects">Projects</a></li>
             <li><a href="contact">Contact</a></li>
         </ul>
+
+        <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle color theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4" />
+                    <path
+                        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </button>
+            <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
     <div id="hero" class="hero-large">
@@ -41,24 +57,24 @@
 
                 <div class="hero-nav-buttons">
                     <a href="about" class="hero-nav-btn">
-                    <span class="hero-nav-btn-label">Who I Am</span>
-                    <span class="hero-nav-btn-text">About Me →</span>
+                        <span class="hero-nav-btn-label">Who I Am</span>
+                        <span class="hero-nav-btn-text">About Me →</span>
                     </a>
                     <a href="resume" class="hero-nav-btn">
-                    <span class="hero-nav-btn-label">My Background</span>
-                    <span class="hero-nav-btn-text">Resume →</span>
+                        <span class="hero-nav-btn-label">My Background</span>
+                        <span class="hero-nav-btn-text">Resume →</span>
                     </a>
                     <a href="skills" class="hero-nav-btn">
-                    <span class="hero-nav-btn-label">What I Know</span>
-                    <span class="hero-nav-btn-text">Skills →</span>
+                        <span class="hero-nav-btn-label">What I Know</span>
+                        <span class="hero-nav-btn-text">Skills →</span>
                     </a>
                     <a href="projects" class="hero-nav-btn">
-                    <span class="hero-nav-btn-label">What I've Built</span>
-                    <span class="hero-nav-btn-text">Projects →</span>
+                        <span class="hero-nav-btn-label">What I've Built</span>
+                        <span class="hero-nav-btn-text">Projects →</span>
                     </a>
                     <a href="contact" class="hero-nav-btn primary-btn">
-                    <span class="hero-nav-btn-label">Get In Touch</span>
-                    <span class="hero-nav-btn-text">Contact →</span>
+                        <span class="hero-nav-btn-label">Get In Touch</span>
+                        <span class="hero-nav-btn-text">Contact →</span>
                     </a>
                 </div>
             </div>

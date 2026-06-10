@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blake Linders — Contact</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blake Linders — Contact</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>try { var t = localStorage.getItem('theme') || 'dark'; document.documentElement.setAttribute('data-theme', t); } catch (e) { }</script>
 </head>
+
 <body>
 
     <nav id="nav">
         <a href="/" class="nav-name">Blake Linders</a>
-        <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-            <span></span><span></span><span></span>
-        </button>
         <ul class="nav-links" id="nav-links">
             <li><a href="about">About</a></li>
             <li><a href="resume">Resume</a></li>
@@ -21,48 +23,78 @@
             <li><a href="projects">Projects</a></li>
             <li><a href="contact" class="nav-active">Contact</a></li>
         </ul>
+
+        <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle color theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4" />
+                    <path
+                        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </button>
+            <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
-<div class="subpage-content">
-  <section id="contact" class="reveal">
-    <div class="section">
-      <p class="section-title">Contact</p>
-      <p class="contact-lead">I am currently open to internships, research collaborations, and interesting engineering projects. Reach out through any of the channels below.</p>
-      
-      <div class="contact-grid">
-        <a href="mailto:blakelinders@tamu.edu" class="contact-card">
-          <div class="cc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <h3>Email Me</h3>
-          <p>blakelinders@tamu.edu</p>
-        </a>
+    <div class="subpage-content">
+        <section id="contact" class="reveal">
+            <div class="section">
+                <p class="section-title">Contact</p>
+                <p class="contact-lead">I am currently open to internships, research collaborations, and interesting
+                    engineering projects. Reach out through any of the channels below.</p>
 
-        <a href="https://linkedin.com/in/blakelinders" target="_blank" rel="noopener" class="contact-card">
-          <div class="cc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </div>
-          <h3>LinkedIn</h3>
-          <p>Connect Professionally</p>
-        </a>
+                <div class="contact-grid">
+                    <a href="mailto:blakelinders@tamu.edu" class="contact-card">
+                        <div class="cc-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <h3>Email Me</h3>
+                        <p>blakelinders@tamu.edu</p>
+                    </a>
 
-        <a href="https://github.com/balblake" target="_blank" rel="noopener" class="contact-card">
-          <div class="cc-icon">
-             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-          </div>
-          <h3>GitHub</h3>
-          <p>View My Code</p>
-        </a>
-      </div>
+                    <a href="https://linkedin.com/in/blakelinders" target="_blank" rel="noopener" class="contact-card">
+                        <div class="cc-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect Professionally</p>
+                    </a>
+
+                    <a href="https://github.com/balblake" target="_blank" rel="noopener" class="contact-card">
+                        <div class="cc-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                            </svg>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>View My Code</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <span>© 2026 Blake Linders</span>
+            <span>Electrical Engineer</span>
+        </footer>
     </div>
-  </section>
 
-  <footer>
-    <span>© 2026 Blake Linders</span>
-    <span>Electrical Engineer</span>
-  </footer>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
