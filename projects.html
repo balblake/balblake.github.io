@@ -37,7 +37,7 @@
             <div class="section">
                 <p class="section-title">Selected Projects</p>
 
-                <div class="large-project">
+                <div class="large-project" id="esp32-rc-vehicle">
                     <h1 class="lp-title">ESP32 Three-Wheel RC Vehicle</h1>
                     <div class="lp-meta"><span class="lp-date">Independent Project · May 2026 – Present</span></div>
                     <div class="lp-media-placeholder"><span>[ Add RC vehicle prototype or PCB image ]</span></div>
@@ -59,10 +59,17 @@
 
                 <hr class="divider" style="margin: 4rem 0;" />
 
-                <div class="large-project">
+                <div class="large-project" id="ecen-214-lab-6">
                     <h1 class="lp-title">Cascaded Third-Order Frequency Response Experiment</h1>
                     <div class="lp-meta"><span class="lp-date">ECEN 214 Lab 6 · Spring 2026</span></div>
-                    <div class="lp-media-placeholder"><span>[ Add the Lab 6 circuit, Bode plot, or oscilloscope image ]</span></div>
+                    <div class="lp-media-gallery lab6-gallery" aria-label="Lab 6 oscilloscope measurements at two phase conditions">
+                        <div class="lp-media-tile oscilloscope-phase-126">
+                            <img src="images/projects/lab6-oscilloscope-phase-126.jpeg" alt="Oscilloscope showing complete input and output waveforms with a measured phase shift of negative 126.84 degrees" />
+                        </div>
+                        <div class="lp-media-tile oscilloscope-phase-43">
+                            <img src="images/projects/lab6-oscilloscope-phase-43.jpeg" alt="Oscilloscope showing complete input and output waveforms with a measured phase shift of negative 43.31 degrees" />
+                        </div>
+                    </div>
                     <div class="lp-content">
                         <div class="lp-column">
                             <h2>The Objective</h2>
@@ -81,10 +88,23 @@
 
                 <hr class="divider" style="margin: 4rem 0;" />
 
-                <div class="large-project">
+                <div class="large-project" id="ecen-248-lab-11">
                     <h1 class="lp-title">Six-State FPGA Traffic Controller</h1>
                     <div class="lp-meta"><span class="lp-date">ECEN 248 Lab 11 · Fall 2025</span></div>
-                    <div class="lp-media-placeholder"><span>[ Add the state diagram, Vivado waveform, or ZYBO demonstration image ]</span></div>
+                    <div class="lp-media-gallery lab11-gallery" aria-label="Lab 11 design table and Verilog implementation">
+                        <div class="lp-media-tile table-tile">
+                            <img src="images/projects/lab11-state-table.png" alt="Six-state highway and farm-road traffic timing table" />
+                        </div>
+                        <div class="lp-media-tile code-top">
+                            <img src="images/projects/lab11-verilog-1.png" alt="Verilog module, state definitions, and delay values for the traffic controller" />
+                        </div>
+                        <div class="lp-media-tile code-middle">
+                            <img src="images/projects/lab11-verilog-2.png" alt="Verilog sensor-dependent state transitions and counter-reset logic" />
+                        </div>
+                        <div class="lp-media-tile code-bottom">
+                            <img src="images/projects/lab11-verilog-3.png" alt="Verilog highway and farm-road output logic for each traffic state" />
+                        </div>
+                    </div>
                     <div class="lp-content">
                         <div class="lp-column">
                             <h2>The Objective</h2>
@@ -103,10 +123,43 @@
 
                 <hr class="divider" style="margin: 4rem 0;" />
 
-                <div class="large-project">
+                <div class="large-project" id="ecen-248-lab-10">
+                    <h1 class="lp-title">Four-State FPGA Combination Lock</h1>
+                    <div class="lp-meta"><span class="lp-date">ECEN 248 Lab 10 · Fall 2025</span></div>
+                    <div class="lp-media-gallery lab10-gallery" aria-label="Lab 10 Verilog combination-lock implementation">
+                        <div class="lp-media-tile lock-code-top">
+                            <img src="images/projects/lab10-combination-lock-1.png" alt="Verilog module, state encoding, and next-state logic for the combination lock" />
+                        </div>
+                        <div class="lp-media-tile lock-code-bottom">
+                            <img src="images/projects/lab10-combination-lock-2.png" alt="Verilog final state transitions and sequential state register for the combination lock" />
+                        </div>
+                    </div>
+                    <div class="lp-content">
+                        <div class="lp-column">
+                            <h2>The Objective</h2>
+                            <p>Implement a sequential digital lock that accepts a specific series of 4-bit passwords and key inputs, rejects an incorrect sequence, and asserts its unlock output only after reaching the final state.</p>
+                        </div>
+                        <div class="lp-column">
+                            <h2>The Approach</h2>
+                            <p>I translated the lock sequence into a four-state Verilog finite-state machine with explicit state encoding, combinational next-state logic, and a clocked state register. Incorrect password or key inputs return the controller to its initial locked state.</p>
+                            <p>The lock output is asserted only in the final state. I used Vivado to simulate and synthesize the design before mapping the password and key inputs to the ZYBO Z7-10 FPGA for physical validation.</p>
+                        </div>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill key">Verilog</span><span class="skill key">Finite State Machines</span><span class="skill key">Sequential Logic</span><span class="skill key">Vivado</span><span class="skill key">ZYBO Z7-10 FPGA</span>
+                    </div>
+                </div>
+
+                <hr class="divider" style="margin: 4rem 0;" />
+
+                <div class="large-project" id="fashionmnist-cnn">
                     <h1 class="lp-title">FashionMNIST CNN Image Classifier</h1>
                     <div class="lp-meta"><span class="lp-date">ECEN 250 Lab 10 · Spring 2026</span></div>
-                    <div class="lp-media-placeholder"><span>[ Add training curves, predictions, or confusion-matrix image ]</span></div>
+                    <div class="lp-media-gallery cnn-gallery" aria-label="CNN evaluation code and accuracy results">
+                        <div class="lp-media-tile cnn-results">
+                            <img src="images/projects/cnn-evaluation.png" alt="CNN test evaluation showing 0.2616 loss, 90.21 percent test accuracy, and 91.03 percent validation accuracy" />
+                        </div>
+                    </div>
                     <div class="lp-content">
                         <div class="lp-column">
                             <h2>The Objective</h2>
@@ -115,7 +168,7 @@
                         <div class="lp-column">
                             <h2>The Approach</h2>
                             <p>I first implemented 1D, 2D, and batched convolution operations in PyTorch, then checked the batched implementation against <code>torch.nn.functional.conv2d</code> to verify numerical equivalence.</p>
-                            <p>I trained an optimized two-convolution-layer CNN using 48,000 training and 12,000 validation images. The final model reached 91.03% validation accuracy and 90.21% accuracy on a separate 10,000-image test set.</p>
+                            <p>I trained an optimized two-convolution-layer CNN using 48,000 training and 12,000 validation images. On the separate 10,000-image test set, the final model achieved 90.21% accuracy and 0.2616 loss, closely tracking its 91.03% validation accuracy.</p>
                         </div>
                     </div>
                     <div class="skill-pills">

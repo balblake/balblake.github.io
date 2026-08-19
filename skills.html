@@ -5,16 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blake Linders — Skills</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script>try { var t = localStorage.getItem('theme') || 'dark'; document.documentElement.setAttribute('data-theme', t); } catch (e) { }</script>
 </head>
 
 <body>
-
-    <!-- Nav -->
     <nav id="nav">
         <a href="/" class="nav-name">Blake Linders</a>
         <ul class="nav-links" id="nav-links">
@@ -24,17 +20,13 @@
             <li><a href="projects">Projects</a></li>
             <li><a href="contact">Contact</a></li>
         </ul>
-
         <div class="nav-actions">
             <button id="theme-toggle" aria-label="Toggle color theme">
-                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
                 </svg>
-                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                 </svg>
             </button>
@@ -44,253 +36,86 @@
         </div>
     </nav>
 
-    <!-- Page Content -->
     <div class="subpage-content">
         <div class="section">
+            <p class="section-title">Technical Skills</p>
+            <p class="skills-intro reveal">A concise view of my technical depth, the engineering problems each skill supports, and the environments I can work in.</p>
 
-            <!-- Header -->
-            <p class="section-title">Technical Profile</p>
+            <div class="skills-summary-grid">
+                <article class="skill-summary-card reveal">
+                    <div class="skill-summary-heading"><span class="skill-summary-number">01</span><h2>Digital Design &amp; FPGA</h2></div>
+                    <div class="skill-summary-row"><h3>Technical focus</h3><p>Verilog · Moore and Mealy FSMs · sequential and combinational logic · counters and clock dividers · switch debouncing</p></div>
+                    <div class="skill-summary-row"><h3>Engineering use</h3><p>Translate behavioral and timing requirements into synthesizable control logic, then verify state transitions and physical I/O behavior.</p></div>
+                    <div class="skill-summary-row"><h3>Environment</h3><p>Vivado · ZYBO Z7-10 FPGA · simulation, synthesis, implementation, and hardware validation</p></div>
+                </article>
 
-            <!-- Intro -->
-            <section id="skills">
-                <p class="about-text reveal">
-                    A hands-on technical foundation built through Texas A&amp;M coursework, laboratory validation,
-                    a Coding for Data academic internship, and independent engineering projects. My experience spans
-                    analog circuits, FPGA design, embedded control, machine learning, and data analysis.
-                </p>
+                <article class="skill-summary-card reveal">
+                    <div class="skill-summary-heading"><span class="skill-summary-number">02</span><h2>Embedded Systems &amp; PCB Design</h2></div>
+                    <div class="skill-summary-row"><h3>Technical focus</h3><p>ESP32 · PWM · sensor and actuator interfacing · mixed-voltage logic · WebSockets · SoftAP networking</p></div>
+                    <div class="skill-summary-row"><h3>Engineering use</h3><p>Connect firmware, sensors, motors, and browser controls into responsive systems with communication-loss and power-stage safeguards.</p></div>
+                    <div class="skill-summary-row"><h3>Environment</h3><p>KiCad · two-layer PCB design · breadboard prototyping · L293D motor drivers · ultrasonic sensing</p></div>
+                </article>
+
+                <article class="skill-summary-card reveal">
+                    <div class="skill-summary-heading"><span class="skill-summary-number">03</span><h2>Circuits &amp; Lab Instrumentation</h2></div>
+                    <div class="skill-summary-row"><h3>Technical focus</h3><p>AC/DC and phasor analysis · transfer functions · op-amp circuits · Sallen-Key filters · magnitude and phase response</p></div>
+                    <div class="skill-summary-row"><h3>Engineering use</h3><p>Predict circuit behavior, build and instrument prototypes, compare measurements with theory, and isolate sources of response error.</p></div>
+                    <div class="skill-summary-row"><h3>Environment</h3><p>Oscilloscope · signal generator · multimeter · DAQ · LTspice · breadboard test equipment</p></div>
+                </article>
+
+                <article class="skill-summary-card reveal">
+                    <div class="skill-summary-heading"><span class="skill-summary-number">04</span><h2>Machine Learning &amp; Data</h2></div>
+                    <div class="skill-summary-row"><h3>Technical focus</h3><p>CNNs and RNNs · regression and classification · model evaluation · data cleaning · SQL CTEs and window functions</p></div>
+                    <div class="skill-summary-row"><h3>Engineering use</h3><p>Build image-classification and time-series models, evaluate generalization, and turn large datasets into defensible analytical findings.</p></div>
+                    <div class="skill-summary-row"><h3>Environment</h3><p>Python · PyTorch · scikit-learn · pandas · NumPy · SQL · Plotly</p></div>
+                </article>
+
+                <article class="skill-summary-card reveal">
+                    <div class="skill-summary-heading"><span class="skill-summary-number">05</span><h2>Programming &amp; Engineering Software</h2></div>
+                    <div class="skill-summary-row"><h3>Languages</h3><p>C++ · Python · JavaScript · SQL · HTML/CSS · Java · Verilog</p></div>
+                    <div class="skill-summary-row"><h3>Engineering use</h3><p>Numerical modeling, data pipelines, embedded and browser control, algorithm implementation, and technical interface development.</p></div>
+                    <div class="skill-summary-row"><h3>Workflow</h3><p>Git and GitHub · MATLAB and Simulink · structured debugging · versioned, reproducible project work</p></div>
+                </article>
+            </div>
+
+            <section class="professional-strengths" aria-labelledby="professional-strengths-title">
+                <div class="strengths-header reveal">
+                    <p class="strengths-kicker">Beyond the Technical Work</p>
+                    <h2 id="professional-strengths-title">Leadership &amp; Interdisciplinary Strengths</h2>
+                    <p>Evidence of how I lead, communicate, teach, and contribute across different technical and team environments.</p>
+                </div>
+
+                <div class="strengths-grid">
+                    <article class="strength-card reveal">
+                        <h3>Team Leadership</h3>
+                        <p>Led four bassline members and co-led 11 additional percussion performers while coordinating schedules and rehearsal strategy with instructional staff.</p>
+                        <span class="strength-evidence">50+ cities · 30+ performances · national tour</span>
+                    </article>
+
+                    <article class="strength-card reveal">
+                        <h3>Communication &amp; Instruction</h3>
+                        <p>Instructed five students and co-taught eight additional performers, converting complex standards into clear feedback, repeatable fundamentals, and measurable ensemble improvement.</p>
+                        <span class="strength-evidence">Teaching · feedback · technical explanation</span>
+                    </article>
+
+                    <article class="strength-card reveal">
+                        <h3>Cross-Disciplinary Problem Solving</h3>
+                        <p>Connects electrical engineering, mathematics, embedded systems, machine learning, and data analysis to evaluate problems from both physical-system and computational perspectives.</p>
+                        <span class="strength-evidence">Hardware · software · data · controls</span>
+                    </article>
+
+                    <article class="strength-card reveal">
+                        <h3>Professional Communication</h3>
+                        <p>Transforms technical results into decisions through data-supported recommendations, collaborative lab reporting, and preparation to present AI-enhanced controls research internationally.</p>
+                        <span class="strength-evidence">Analysis · recommendations · presentations</span>
+                    </article>
+                </div>
             </section>
-
-            <!-- ══════════════════════════
-           CATEGORY 1 — Hardware
-           ══════════════════════════ -->
-            <div class="skill-cat-card reveal">
-                <div class="skill-cat-top">
-                    <div class="skill-cat-left">
-                        <div class="skill-cat-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="1.6">
-                                <rect x="7" y="7" width="10" height="10" rx="1" />
-                                <path d="M9 7V4M12 7V4M15 7V4
-                         M9 20v-3M12 20v-3M15 20v-3
-                         M4 9h3M4 12h3M4 15h3
-                         M17 9h3M17 12h3M17 15h3" />
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="skill-cat-name">Electrical &amp; Digital Systems</div>
-                            <div class="skill-cat-source">ECEN 248 &middot; ECEN 214 &middot; Independent Projects</div>
-                        </div>
-                    </div>
-                    <span class="skill-cat-badge">Core EE Skill</span>
-                </div>
-                <p class="skill-cat-desc">
-                    Built and measured first-, second-, and cascaded third-order circuits, comparing observed
-                    magnitude and phase response with theoretical transfer functions. Implemented counters, clock
-                    dividers, adders, switch debouncing, and Moore/Mealy finite state machines in Verilog, then
-                    validated them in Vivado and on a ZYBO Z7-10 FPGA.
-                </p>
-                <div class="skill-pills">
-                    <span class="skill key">Verilog</span>
-                    <span class="skill key">FPGA (ZYBO Z7-10)</span>
-                    <span class="skill key">Vivado</span>
-                    <span class="skill key">Oscilloscope</span>
-                    <span class="skill key">Moore / Mealy FSMs</span>
-                    <span class="skill key">LTspice</span>
-                    <span class="skill key">AC/DC &amp; Phasor Analysis</span>
-                    <span class="skill key">Clock Dividers</span>
-                    <span class="skill key">Breadboard Prototyping</span>
-                    <span class="skill key">DAQ</span>
-                    <span class="skill key">Multimeter</span>
-                    <span class="skill key">Sallen-Key Filters</span>
-                    <span class="skill key">Op-Amp Oscillators</span>
-                    <span class="skill key">Magnitude / Phase Response</span>
-                </div>
-            </div>
-
-            <!-- ══════════════════════════
-           CATEGORY 2 — Data Science
-           ══════════════════════════ -->
-            <div class="skill-cat-card reveal">
-                <div class="skill-cat-top">
-                    <div class="skill-cat-left">
-                        <div class="skill-cat-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="1.6">
-                                <path d="M3 3v18h18" />
-                                <path d="M7 16l4-4 4 4 4-6" />
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="skill-cat-name">Data Science &amp; Machine Learning</div>
-                            <div class="skill-cat-source">Global Career Accelerator &middot; Machine Learning for EE &middot; Katzberg Institute
-                            </div>
-                        </div>
-                    </div>
-                    <span class="skill-cat-badge">Internship Proven</span>
-                </div>
-                <p class="skill-cat-desc">
-                    Implemented convolution operations in PyTorch, trained a two-layer CNN on FashionMNIST to 90.2%
-                    test accuracy, and built two-layer RNNs for one- and two-day sea-level forecasting across 11,115
-                    daily observations. Also used SQL, pandas, and Plotly to analyze a 601,740-record synthetic Intel
-                    sustainability dataset and quantify a 43x awards-night traffic increase in Recording Academy data.
-                </p>
-                <div class="skill-pills">
-                    <span class="skill key">Python</span>
-                    <span class="skill key">PyTorch</span>
-                    <span class="skill key">Scikit-learn</span>
-                    <span class="skill key">Pandas &amp; NumPy</span>
-                    <span class="skill key">CNNs &amp; RNNs</span>
-                    <span class="skill key">Regression</span>
-                    <span class="skill key">Classification</span>
-                    <span class="skill key">SQL</span>
-                    <span class="skill key">Plotly</span>
-                    <span class="skill key">CTEs &amp; Window Functions</span>
-                    <span class="skill key">Data Analysis</span>
-                </div>
-            </div>
-
-            <!-- ══════════════════════════
-           CATEGORY 3 — Software
-           ══════════════════════════ -->
-            <div class="skill-cat-card reveal">
-                <div class="skill-cat-top">
-                    <div class="skill-cat-left">
-                        <div class="skill-cat-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="1.6">
-                                <path d="M8 6L2 12l6 6M16 6l6 6-6 6M13 4l-2 16" />
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="skill-cat-name">Software Engineering &amp; Computing</div>
-                            <div class="skill-cat-source">Program Design &amp; Concepts in C++ &middot; Independent Projects</div>
-                        </div>
-                    </div>
-                    <span class="skill-cat-badge">CS Foundation</span>
-                </div>
-                <p class="skill-cat-desc">
-                    Developed through C++ coursework, data analysis, and project work across embedded and browser
-                    environments. Built a touch-friendly JavaScript controller for an ESP32, used Python for machine
-                    learning and analytics, and maintained project work with Git and GitHub.
-                </p>
-                <div class="skill-pills">
-                    <span class="skill key">C++</span>
-                    <span class="skill key">MATLAB / Simulink</span>
-                    <span class="skill key">Git / GitHub</span>
-                    <span class="skill key">JavaScript</span>
-                    <span class="skill key">HTML &amp; CSS</span>
-                    <span class="skill key">Java</span>
-                    <span class="skill key">SQL</span>
-                    <span class="skill key">WebSockets</span>
-                </div>
-            </div>
-
-            <!-- ══════════════════════════
-           CATEGORY 4 — IoT
-           ══════════════════════════ -->
-            <div class="skill-cat-card reveal">
-                <div class="skill-cat-top">
-                    <div class="skill-cat-left">
-                        <div class="skill-cat-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="1.6">
-                                <path d="M5 12.55a11 11 0 0114.08 0" />
-                                <path d="M1.42 9a16 16 0 0121.16 0" />
-                                <path d="M8.53 16.11a6 6 0 016.95 0" />
-                                <circle cx="12" cy="20" r=".5" fill="currentColor" />
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="skill-cat-name">Embedded Systems &amp; PCB Design</div>
-                            <div class="skill-cat-source">ESP32 Three-Wheel RC Vehicle &middot; Independent Project</div>
-                        </div>
-                    </div>
-                    <span class="skill-cat-badge">Independent Projects</span>
-                </div>
-                <p class="skill-cat-desc">
-                    Integrated an ESP32, L293D motor driver, ultrasonic sensor, and mixed-voltage circuitry in a
-                    working breadboard prototype. Designed a two-layer KiCad PCB with Schottky-diode protection and
-                    supply decoupling, then connected a SoftAP captive portal and WebSocket controller to PWM motor
-                    commands with a 500 ms communication-loss safety stop.
-                </p>
-                <div class="skill-pills">
-                    <span class="skill key">ESP32</span>
-                    <span class="skill key">KiCad</span>
-                    <span class="skill key">PCB Schematic Capture</span>
-                    <span class="skill key">PCB Placement</span>
-                    <span class="skill key">PWM</span>
-                    <span class="skill key">WebSockets</span>
-                    <span class="skill key">SoftAP &amp; Captive Portal</span>
-                </div>
-            </div>
-
-            <!-- ══════════════════════════
-           TOOLS GRID
-           ══════════════════════════ -->
-            <div class="tools-wrap reveal">
-                <p class="tools-label">Tools &amp; Software</p>
-                <p class="tools-sub">Every tool listed has been used in coursework, internship work, or independent
-                    projects</p>
-                <div class="tools-grid">
-                    <div class="tool-chip">Vivado</div>
-                    <div class="tool-chip">LTspice</div>
-                    <div class="tool-chip">MATLAB</div>
-                    <div class="tool-chip">Simulink</div>
-                    <div class="tool-chip">KiCad</div>
-                    <div class="tool-chip">Git / GitHub</div>
-                    <div class="tool-chip">C++</div>
-                    <div class="tool-chip">SQL</div>
-                    <div class="tool-chip">Oscilloscope</div>
-                    <div class="tool-chip">DAQ</div>
-                    <div class="tool-chip">Multimeter</div>
-                    <div class="tool-chip">Breadboard</div>
-                    <div class="tool-chip">NumPy</div>
-                    <div class="tool-chip">Pandas</div>
-                    <div class="tool-chip">Plotly</div>
-                    <div class="tool-chip">Scikit-learn</div>
-                    <div class="tool-chip">PyTorch</div>
-                    <div class="tool-chip">JavaScript</div>
-                    <div class="tool-chip">HTML / CSS</div>
-                </div>
-            </div>
-
-            <!-- ══════════════════════════
-           CURRENTLY LEARNING
-           ══════════════════════════ -->
-            <div class="learning-wrap reveal">
-                <p class="tools-label">Current Coursework</p>
-                <p class="tools-sub">Courses in progress at Texas A&amp;M University</p>
-                <div class="learning-grid">
-                    <div class="learning-card">
-                        <div class="learning-title">Electric Energy Conversion</div>
-                        <div class="learning-sub">Energy conversion principles and electromechanical systems</div>
-                    </div>
-                    <div class="learning-card">
-                        <div class="learning-title">Signals &amp; Systems</div>
-                        <div class="learning-sub">Continuous- and discrete-time system and signal analysis</div>
-                    </div>
-                    <div class="learning-card">
-                        <div class="learning-title">Electronics</div>
-                        <div class="learning-sub">Electronic devices, circuits, and practical analysis</div>
-                    </div>
-                    <div class="learning-card">
-                        <div class="learning-title">Electric &amp; Magnetic Fields</div>
-                        <div class="learning-sub">Field theory and electromagnetic behavior</div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <span>&copy; 2026 Blake Linders</span>
-        <span>Electrical Engineering Student</span>
-    </footer>
-
+    <footer><span>&copy; 2026 Blake Linders</span><span>Electrical Engineering Student</span></footer>
     <script src="script.js"></script>
-
 </body>
 
 </html>

@@ -862,6 +862,186 @@ hr.divider {
   line-height: 1.6;
 }
 
+/* Recruiter-focused Skills Summary */
+.skills-intro {
+  max-width: 760px;
+  margin: -1rem 0 2.5rem;
+  color: var(--text-2);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.skills-summary-grid {
+  display: block;
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-summary-card {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.7fr) minmax(0, 1.8fr);
+  column-gap: clamp(2rem, 5vw, 4.5rem);
+  min-width: 0;
+  padding: 2.25rem 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-radius: 0;
+}
+
+.skill-summary-card:hover {
+  border-color: var(--green-l);
+}
+
+.skill-summary-card:last-child {
+  grid-column: auto;
+}
+
+.skill-summary-heading {
+  display: block;
+  grid-row: 1 / span 3;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.skill-summary-number {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-family: "Andale Mono", monospace;
+  color: var(--green-l);
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  opacity: 0.72;
+}
+
+.skill-summary-heading h2 {
+  color: var(--text);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.25;
+}
+
+.skill-summary-row {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 0.8rem;
+  padding: 0.45rem 0;
+  border: 0;
+}
+
+.skill-summary-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.skill-summary-row h3 {
+  color: var(--green-l);
+  font-family: "Andale Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+.skill-summary-row p {
+  color: var(--text-2);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.skill-summary-row a {
+  color: var(--green-l);
+  text-decoration: underline;
+  text-decoration-color: rgba(61, 140, 104, 0.35);
+  text-underline-offset: 3px;
+}
+
+.skill-summary-row a:hover {
+  color: var(--text);
+}
+
+.professional-strengths {
+  margin-top: 4rem;
+  padding-top: 0;
+  border: 0;
+}
+
+.strengths-header {
+  max-width: 720px;
+  margin-bottom: 1.5rem;
+}
+
+.strengths-kicker {
+  margin-bottom: 0.45rem;
+  color: var(--green-l);
+  font-family: "Andale Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.strengths-header h2 {
+  margin-bottom: 0.55rem;
+  color: var(--text);
+  font-size: 1.55rem;
+}
+
+.strengths-header > p:last-child {
+  color: var(--text-2);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(2rem, 5vw, 4rem);
+  row-gap: 0;
+}
+
+.strength-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  background: transparent;
+  border: 0;
+  border-top: 2px solid var(--border-2);
+  border-radius: 0;
+  padding: 1.35rem 0 2rem;
+  transition: border-color 0.2s;
+}
+
+.strength-card:hover {
+  border-color: var(--green-l);
+}
+
+.strength-card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--text);
+  font-size: 1.18rem;
+}
+
+.strength-card p {
+  margin-bottom: 1rem;
+  color: var(--text-2);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.strength-evidence {
+  margin-top: auto;
+  padding-top: 0;
+  border: 0;
+  color: var(--green-l);
+  font-family: "Andale Mono", monospace;
+  font-size: 0.67rem;
+  letter-spacing: 0.04em;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
 /* Large Projects Page */
 .large-project {
   margin-bottom: 2rem;
@@ -894,6 +1074,92 @@ hr.divider {
   justify-content: center;
   color: var(--text-3);
   margin-bottom: 2rem;
+}
+
+.lp-media-gallery {
+  width: 100%;
+  height: 400px;
+  display: grid;
+  gap: 3px;
+  overflow: hidden;
+  background: var(--border-2);
+  border: 1px solid var(--border-2);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.lab11-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.lab6-gallery,
+.lab10-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+}
+
+.cnn-gallery {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.lp-media-tile {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.lp-media-tile img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.table-tile img {
+  object-fit: contain;
+}
+
+.code-top img,
+.code-middle img,
+.code-bottom img {
+  object-fit: cover;
+}
+
+.code-top img {
+  object-position: 40% 22%;
+}
+
+.code-middle img {
+  object-position: 40% 50%;
+}
+
+.code-bottom img {
+  object-position: 40% 58%;
+}
+
+.lock-code-top img {
+  object-fit: cover;
+  object-position: left center;
+}
+
+.lock-code-bottom img {
+  object-fit: cover;
+  object-position: left center;
+}
+
+.oscilloscope-phase-126 img {
+  object-position: 54% 50%;
+}
+
+.oscilloscope-phase-43 img {
+  object-position: 49% 50%;
+}
+
+.cnn-results img {
+  object-fit: contain;
 }
 .lp-content {
   display: grid;
@@ -1108,6 +1374,12 @@ footer {
     height: 250px;
   }
 
+  .lp-media-gallery {
+    height: 250px;
+    gap: 2px;
+  }
+
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -1115,6 +1387,28 @@ footer {
   .skill-cat-top {
     flex-direction: column;
     gap: 0.75rem;
+  }
+  .skills-summary-grid {
+    display: block;
+  }
+  .skill-summary-card {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1.75rem 0;
+  }
+  .skill-summary-heading {
+    grid-row: auto;
+  }
+  .skill-summary-number {
+    margin-bottom: 0.35rem;
+    font-size: 1.15rem;
+  }
+  .skill-summary-row {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+  .strengths-grid {
+    grid-template-columns: 1fr;
   }
   .tools-grid {
     grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
