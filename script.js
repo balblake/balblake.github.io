@@ -45,36 +45,24 @@ themeToggle.addEventListener("click", () => {
   } catch (e) {}
 });
 
-// Section Reveal
-const currentPage = window.location.pathname;
-const isOneWayPage =
-  currentPage.endsWith(".io") ||
-  currentPage.endsWith("/") ||
-  currentPage.endsWith("about");
-
+// Section Reveal — elements stay visible after entering the viewport.
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        if (isOneWayPage) {
-          revealObserver.unobserve(entry.target);
-        }
-      } else {
-        if (!isOneWayPage) {
-          entry.target.classList.remove("visible");
-        }
+        revealObserver.unobserve(entry.target);
       }
     });
   },
   {
-    threshold: 0.11,
-    rootMargin: "-76px 0px 0px 0px",
+    threshold: 0.01,
+    rootMargin: "0px 0px -32px 0px",
   },
 );
 
+const revealElements = document.querySelectorAll(".reveal");
+
 setTimeout(() => {
-  document
-    .querySelectorAll(".reveal")
-    .forEach((el) => revealObserver.observe(el));
-}, 150);
+  revealElements.forEach((el) => revealObserver.observe(el));
+}, 100);

@@ -1252,6 +1252,12 @@ footer {
 
 /* Consolidated Mobile Responsive Block */
 @media (max-width: 768px) {
+  .subpage-content,
+  .about-subpage-content {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
   #nav {
     padding: 0 1.25rem;
   }
